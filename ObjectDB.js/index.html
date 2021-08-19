@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="" content="">
+  <title>ttd</title>
+  <script type="text/javascript" charset="utf-8">
+    if (!localStorage.getItem('bg')) {
+      localStorage.setItem('bg', 'black')
+    }
+  </script>
+</head>
+<body style="background:black">
+<script type="module">
+import types from './types.js';
+import {odbAggregate, column, table, odb}  from './index.js'  
+
+odbAggregate('dbtest', [
+  table('usertest', [
+    column('name', {type: types.string}),
+    column('email', {type: types.string, unique: true}),
+    column('password', {type: types.string}),
+    column('verified', {type: types.bool, defaultValue: false}),
+  ])
+]);
+
+const db = odb('dbtest')
+const ref = db.ref('usertest');
+
+ref.add({
+  name: 'eduar chelsea',
+  email: 'chelsea@gmail.com',
+  password: 'hello'
+}).then(console.log)
+</script>
+</body>
+</html>

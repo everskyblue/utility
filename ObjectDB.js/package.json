@@ -1,0 +1,12 @@
+{
+  "name": "ObjectDB",
+  "version": "1.0.0",
+  "description": "modelo para almacenar datos como emulacion de base de datos",
+  "main": "dist/odb.common.js",
+  "scripts": {
+    "start": "rollup index.js --file dist/odb.js --format umd -n ObjectDB"
+  },
+  "keywords": [],
+  "author": "Nike Madrid",
+  "license": "MIT"
+}
