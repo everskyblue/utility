@@ -2,9 +2,9 @@
   "name": "ObjectDB",
   "version": "1.0.0",
   "description": "modelo para almacenar datos como emulacion de base de datos",
-  "main": "dist/odb.common.js",
+  "main": "dist/emudb.js",
   "scripts": {
-    "start": "rollup index.js --file dist/odb.js --format umd -n ObjectDB"
+    "start": "rollup index.js --file dist/emudb.js --format umd -n EmuDB"
   },
   "keywords": [],
   "author": "Nike Madrid",
