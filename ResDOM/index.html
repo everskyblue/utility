@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>find view</title>
+</head>
+
+<body>
+  <div id="ok"></div>
+  <script src="./object-watch.js"></script>
+  <script src="find-view.js" type="module"></script>
+  <script type="module">
+    import R from './find-view.js';
+
+    const data = R.findViewById(R.id.press);
+    data.setViewOnListener({
+      click: e => console.log(e.target)
+    });
+
+    let e = document.createElement('div')
+    e.innerText='click me'
+    document.body.appendChild(e)
+    
+    setTimeout(()=> {
+        e.id='press'
+        document.body.firstElementChild.id='todo'
+    }, 1500)
+    </script>
+</body>
+
+</html>

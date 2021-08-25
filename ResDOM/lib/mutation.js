@@ -1,0 +1,3 @@
+const MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+export default MutationObserver;
